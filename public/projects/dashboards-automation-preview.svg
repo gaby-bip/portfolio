@@ -1,0 +1,45 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#EEF4FF"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#3176F5"/>
+      <stop offset="1" stop-color="#0C4CCB"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="62" y="68" width="500" height="760" rx="30" fill="white" stroke="#D6E3FF"/>
+  <text x="112" y="156" fill="#0A2B6A" font-family="Verdana, sans-serif" font-size="64" font-weight="700">Dashboards</text>
+  <text x="112" y="224" fill="#2E62CF" font-family="Verdana, sans-serif" font-size="60" font-weight="700">e automacao</text>
+  <text x="112" y="292" fill="#4A5F8D" font-family="Verdana, sans-serif" font-size="31">Dados, integracoes e ganhos</text>
+  <text x="112" y="330" fill="#4A5F8D" font-family="Verdana, sans-serif" font-size="31">de eficiencia operacional.</text>
+  <rect x="112" y="390" width="392" height="76" rx="18" fill="#F2F7FF" stroke="#D6E3FF"/>
+  <text x="144" y="438" fill="#214B99" font-family="Verdana, sans-serif" font-size="30" font-weight="600">Python | SQL | ETL</text>
+  <rect x="112" y="484" width="392" height="76" rx="18" fill="#F2F7FF" stroke="#D6E3FF"/>
+  <text x="144" y="532" fill="#214B99" font-family="Verdana, sans-serif" font-size="30" font-weight="600">PostgreSQL | APIs</text>
+  <rect x="112" y="578" width="392" height="76" rx="18" fill="#F2F7FF" stroke="#D6E3FF"/>
+  <text x="144" y="626" fill="#214B99" font-family="Verdana, sans-serif" font-size="30" font-weight="600">Analytics | Dashboards</text>
+  <rect x="596" y="108" width="942" height="680" rx="34" fill="white" stroke="#D6E3FF"/>
+  <rect x="596" y="108" width="942" height="92" rx="34" fill="#F6FAFF"/>
+  <text x="654" y="165" fill="#1A3F86" font-family="Verdana, sans-serif" font-size="36" font-weight="700">Dashboard Executivo</text>
+  <rect x="652" y="244" width="248" height="140" rx="20" fill="#F9FCFF" stroke="#DCE8FF"/>
+  <text x="684" y="296" fill="#3E5E9D" font-family="Verdana, sans-serif" font-size="27" font-weight="600">Faturamento</text>
+  <text x="684" y="350" fill="#1D3363" font-family="Verdana, sans-serif" font-size="52" font-weight="700">R$ 1.25M</text>
+  <rect x="922" y="244" width="248" height="140" rx="20" fill="#F9FCFF" stroke="#DCE8FF"/>
+  <text x="954" y="296" fill="#3E5E9D" font-family="Verdana, sans-serif" font-size="27" font-weight="600">Clientes</text>
+  <text x="954" y="350" fill="#1D3363" font-family="Verdana, sans-serif" font-size="52" font-weight="700">3.782</text>
+  <rect x="1192" y="244" width="248" height="140" rx="20" fill="#F9FCFF" stroke="#DCE8FF"/>
+  <text x="1224" y="296" fill="#3E5E9D" font-family="Verdana, sans-serif" font-size="27" font-weight="600">Conversao</text>
+  <text x="1224" y="350" fill="#1D3363" font-family="Verdana, sans-serif" font-size="52" font-weight="700">3.45%</text>
+  <rect x="652" y="414" width="788" height="334" rx="24" fill="#FBFDFF" stroke="#DCE8FF"/>
+  <text x="694" y="466" fill="#2D4E8E" font-family="Verdana, sans-serif" font-size="30" font-weight="600">Evolucao de indicadores</text>
+  <path d="M708 674L810 624L909 640L1008 571L1103 594L1206 515L1338 543" stroke="url(#accent)" stroke-width="9" stroke-linecap="round"/>
+  <rect x="708" y="524" width="76" height="130" rx="10" fill="#DCE8FF"/>
+  <rect x="804" y="492" width="76" height="162" rx="10" fill="#CADDFF"/>
+  <rect x="900" y="456" width="76" height="198" rx="10" fill="#B7D2FF"/>
+  <rect x="996" y="420" width="76" height="234" rx="10" fill="#A2C5FF"/>
+  <text x="706" y="712" fill="#506A97" font-family="Verdana, sans-serif" font-size="24">Do dado a decisao: ETL -> API -> Dashboard -> Insights</text>
+</svg>
+

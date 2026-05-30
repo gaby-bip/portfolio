@@ -1,0 +1,24 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071224"/>
+      <stop offset="1" stop-color="#0F1D38"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#5AA6FF"/>
+      <stop offset="1" stop-color="#8FD6FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="62" y="62" width="1076" height="506" rx="28" fill="#0E1B31" stroke="#2E4368"/>
+  <text x="120" y="206" fill="#9EC2FF" font-family="Verdana, sans-serif" font-size="24" letter-spacing="4">PORTFOLIO PROFISSIONAL</text>
+  <text x="120" y="300" fill="#F0F5FF" font-family="Verdana, sans-serif" font-size="74" font-weight="700">Gabrielly Santos</text>
+  <text x="120" y="362" fill="#AAC1E8" font-family="Verdana, sans-serif" font-size="34">Full Stack Developer | Cloud Computing | AI & Automation</text>
+  <path d="M120 436H1080" stroke="#263F67"/>
+  <path d="M120 502H458L556 456L666 484L762 428L858 456L980 392L1080 422" stroke="url(#line)" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="556" cy="456" r="7" fill="#8FC8FF"/>
+  <circle cx="666" cy="484" r="7" fill="#8FC8FF"/>
+  <circle cx="762" cy="428" r="7" fill="#8FC8FF"/>
+  <circle cx="858" cy="456" r="7" fill="#8FC8FF"/>
+  <circle cx="980" cy="392" r="7" fill="#8FC8FF"/>
+</svg>
