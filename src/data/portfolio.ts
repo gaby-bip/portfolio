@@ -62,6 +62,34 @@ export const portfolioData = {
   ],
   experience: [
     {
+      company: "Taori",
+      role: "Desenvolvedora Full Stack Jr.",
+      period: "jul/2026 – atual",
+      summary:
+        "Desenvolvimento de aplicações web e sistemas internos, com foco em integrações, manutenção de plataformas e entrega de interfaces responsivas e acessíveis.",
+      highlights: [
+        "Desenvolvimento de aplicações web e sistemas internos com JavaScript, TypeScript, React, Next.js e Node.js.",
+        "Desenvolvimento de integrações via APIs REST e Webhooks.",
+        "Manutenção e evolução de WordPress, WooCommerce e PHP.",
+        "Modelagem e integração com bancos de dados relacionais e não relacionais, utilizando Git.",
+        "Desenvolvimento de interfaces HTML5/CSS3 com foco em responsividade, acessibilidade e performance.",
+      ],
+      technologies: [
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+        "APIs REST",
+        "Webhooks",
+        "WordPress",
+        "WooCommerce",
+        "PHP",
+        "Git",
+        "HTML5/CSS3",
+      ],
+    },
+    {
       company: "LDVnet",
       role: "Desenvolvedora Full Stack",
       period: "Atuação profissional",
