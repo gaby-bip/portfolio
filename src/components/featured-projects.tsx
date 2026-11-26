@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { BadgeCheck, Expand, X } from "lucide-react";
+import { BadgeCheck, Expand, ExternalLink, X } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -10,6 +10,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 type FeaturedProject = {
   name: string;
   image: string | null;
+  link?: string;
   status: string;
   description: string;
   features: readonly string[];
@@ -82,6 +83,17 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                   <span className="rounded-full border border-border/70 bg-background/70 px-2.5 py-1 text-xs text-muted-foreground">
                     {project.status}
                   </span>
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="inline-flex items-center gap-1 rounded-full border border-border/70 px-2.5 py-1 text-xs text-muted-foreground transition-colors hover:border-accent/50 hover:text-accent"
+                    >
+                      Ver site
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
+                  )}
                 </div>
                 <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
                   {project.description}

@@ -148,13 +148,15 @@ export const portfolioData = {
       image: null,
       status: "Publicado",
       description:
-        "Criação do site Copy$Brota, da estrutura à interface. Os modelos disponíveis dentro do site também foram criados por mim.",
+        "Criação do site Copy$Brota, voltado à venda de landing pages, sites institucionais, lojas virtuais e redesign. Os modelos de demonstração disponíveis dentro do site, com um layout próprio por nicho, também foram criados por mim.",
+      link: "https://copybrota.com/",
       features: [
-        "Desenvolvimento do site",
-        "Criação dos modelos disponíveis no site",
-        "Interface responsiva",
+        "Desenvolvimento completo do site em WordPress e Elementor Pro",
+        "7 modelos de demonstração por nicho: psicóloga, nutricionista, estética, personal trainer, moda íntima, tatuagem e confeitaria",
+        "Estrutura de UI/UX orientada à conversão via WhatsApp",
+        "Layout responsivo com seções de serviços, método e contato",
       ],
-      technologies: [],
+      technologies: ["WordPress", "Elementor Pro", "UI/UX", "Design responsivo"],
     },
     {
       name: "Taori Academy",
