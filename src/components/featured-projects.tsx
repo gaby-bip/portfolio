@@ -2,12 +2,15 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { BadgeCheck, Expand, X } from "lucide-react";
+import { BadgeCheck, Expand, ExternalLink, X } from "lucide-react";
 import { Reveal } from "@/components/reveal";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 type FeaturedProject = {
   name: string;
-  image: string;
+  image: string | null;
+  link?: string;
   status: string;
   description: string;
   features: readonly string[];
@@ -51,9 +54,10 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
             delay={index * 0.08}
             className="overflow-hidden rounded-3xl border border-border/70 bg-surface/90"
           >
+            {project.image && (
             <div className="group relative h-52 w-full overflow-hidden border-b border-border/70 sm:h-64">
               <Image
-                src={project.image}
+                src={`${basePath}${project.image}`}
                 alt={`Preview do projeto ${project.name}`}
                 fill
                 priority={index === 0}
@@ -71,6 +75,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                 Clique para ampliar
               </span>
             </div>
+            )}
             <div className="grid gap-6 p-6 md:grid-cols-[1.2fr_1fr]">
               <div>
                 <div className="mb-3 flex flex-wrap items-center gap-2">
@@ -78,10 +83,22 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                   <span className="rounded-full border border-border/70 bg-background/70 px-2.5 py-1 text-xs text-muted-foreground">
                     {project.status}
                   </span>
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="inline-flex items-center gap-1 rounded-full border border-border/70 px-2.5 py-1 text-xs text-muted-foreground transition-colors hover:border-accent/50 hover:text-accent"
+                    >
+                      Ver site
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
+                  )}
                 </div>
                 <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
                   {project.description}
                 </p>
+                {project.technologies.length > 0 && (
                 <div className="mt-5 flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <span
@@ -92,6 +109,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                     </span>
                   ))}
                 </div>
+                )}
               </div>
 
               <div>
@@ -112,7 +130,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
         ))}
       </div>
 
-      {activeProject && (
+      {activeProject?.image && (
         <div
           className="fixed inset-0 z-[80] flex items-center justify-center bg-black/82 p-4 backdrop-blur-sm"
           onClick={() => setActiveProject(null)}
@@ -134,7 +152,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
             onClick={(event) => event.stopPropagation()}
           >
             <Image
-              src={activeProject.image}
+              src={`${basePath}${activeProject.image}`}
               alt={`Imagem ampliada do projeto ${activeProject.name}`}
               fill
               sizes="100vw"

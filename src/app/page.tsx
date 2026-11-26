@@ -15,6 +15,8 @@ import { FeaturedProjects } from "@/components/featured-projects";
 import { portfolioData } from "@/data/portfolio";
 import { iconMap } from "@/lib/icon-map";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 function SectionHeader({
   overline,
   title,
@@ -66,15 +68,18 @@ export default function Home() {
                   LinkedIn
                   <ArrowUpRight className="h-4 w-4" />
                 </a>
-                <a
-                  href={portfolioData.links.cv}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="inline-flex items-center gap-2 rounded-full border border-border bg-transparent px-5 py-2.5 text-sm font-medium text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/45 hover:text-accent"
-                >
-                  Download CV
-                  <ArrowUpRight className="h-4 w-4" />
-                </a>
+                {portfolioData.links.cvs.map((cv) => (
+                  <a
+                    key={cv.href}
+                    href={`${basePath}${cv.href}`}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="inline-flex items-center gap-2 rounded-full border border-border bg-transparent px-5 py-2.5 text-sm font-medium text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/45 hover:text-accent"
+                  >
+                    {cv.label}
+                    <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                ))}
                 <a
                   href="#contato"
                   className="inline-flex items-center gap-2 rounded-full border border-border bg-transparent px-5 py-2.5 text-sm font-medium text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/45 hover:text-accent"
@@ -85,7 +90,7 @@ export default function Home() {
               </div>
 
               <div className="flex flex-wrap gap-2 pt-2">
-                {portfolioData.seo.keywords.slice(1, 11).map((keyword) => (
+                {portfolioData.seo.keywords.slice(1).map((keyword) => (
                   <span
                     key={keyword}
                     className="rounded-full border border-border/70 bg-background/70 px-3 py-1 text-xs text-muted-foreground"
@@ -101,8 +106,8 @@ export default function Home() {
         <section id="sobre" className="scroll-mt-32 pt-24">
           <SectionHeader
             overline="Sobre"
-            title="Tecnologia aplicada com visão de produto e resultado"
-            description="Uma atuação que conecta engenharia, cloud, automação, IA e dados para construir soluções robustas e sustentáveis."
+            title="Desenvolvimento com olhar de quem já esteve no suporte"
+            description="Experiência em desenvolvimento Full Stack somada à vivência em sustentação de aplicações, com foco em qualidade e estabilidade."
           />
 
           <div className="grid gap-5 md:grid-cols-[1.6fr_1fr]">
@@ -134,7 +139,7 @@ export default function Home() {
           <SectionHeader
             overline="Experiência profissional"
             title="Trajetória com foco em evolução técnica e impacto"
-            description="Contextos que fortaleceram a atuação em desenvolvimento Full Stack, cloud computing, dados, automação e IA aplicada."
+            description="Do suporte N1/N2 e sustentação de sistemas ao desenvolvimento Full Stack."
           />
 
           <div className="relative space-y-5">
@@ -188,7 +193,7 @@ export default function Home() {
           <SectionHeader
             overline="Stack tecnológica"
             title="Competências organizadas por domínio técnico"
-            description="Ecossistema de ferramentas e tecnologias aplicado em desenvolvimento, cloud, dados e inteligência artificial."
+            description="Tecnologias e ferramentas usadas em desenvolvimento, dados, cloud e suporte técnico."
           />
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -219,9 +224,9 @@ export default function Home() {
 
         <section id="cloud-ai" className="scroll-mt-32 pt-24">
           <SectionHeader
-            overline="Cloud & AI Projects"
-            title="Aprendizado contínuo com aplicação prática"
-            description="Projetos técnicos em nuvem e inteligência artificial orientados por experimentação, boas práticas e evolução constante."
+            overline="Cloud & IA"
+            title="Laboratórios e estudos práticos"
+            description="Laboratórios com serviços AWS e experimentos com IA, publicados no LinkedIn."
           />
 
           <div className="grid gap-4 md:grid-cols-2">
@@ -267,8 +272,8 @@ export default function Home() {
         <section id="projetos" className="scroll-mt-32 pt-24">
           <SectionHeader
             overline="Projetos em destaque"
-            title="Produtos e aplicações com foco em negócio e escala"
-            description="Projetos que unem software, dados, APIs e automação para construir experiências digitais consistentes."
+            title="Sites, plataformas e aplicações"
+            description="Projetos em que atuei no desenvolvimento, da interface às integrações."
           />
 
           <FeaturedProjects projects={portfolioData.featuredProjects} />
@@ -277,8 +282,8 @@ export default function Home() {
         <section id="certificacoes" className="scroll-mt-32 pt-24">
           <SectionHeader
             overline="Certificações"
-            title="Formação complementar orientada a tecnologia aplicada"
-            description="Capacitações alinhadas a cloud, inteligência artificial e plataformas de mercado."
+            title="Formação complementar"
+            description="Capacitações em cloud, inteligência artificial, versionamento e plataformas de mercado."
           />
 
           <div className="grid gap-4 md:grid-cols-3">
@@ -325,8 +330,8 @@ export default function Home() {
               <p className="section-overline">Contato</p>
               <h2 className="section-title mb-4">Vamos conversar sobre tecnologia e projetos</h2>
               <p className="section-description mb-8 max-w-2xl">
-                Disponível para conversas sobre desenvolvimento de software, cloud computing,
-                inteligência artificial, automação de processos e novas oportunidades.
+                Aberta a oportunidades em desenvolvimento Full Stack e em suporte técnico /
+                sustentação de sistemas.
               </p>
               <div className="grid gap-4 sm:grid-cols-2">
                 <a
@@ -367,7 +372,7 @@ export default function Home() {
       <footer className="border-t border-border/60">
         <div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-2 px-6 py-6 text-xs text-muted-foreground md:flex-row md:items-center md:px-8">
           <span>{portfolioData.profile.name}</span>
-          <span>Full Stack • Cloud Computing • AI • Automation • Data</span>
+          <span>Desenvolvimento Full Stack • Suporte Técnico • Sustentação de Sistemas</span>
         </div>
       </footer>
     </>
